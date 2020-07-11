@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- font-family link -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <!-- External Style Sheet link -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Responsive Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+  </head>
+  <body>
+    <!-- First Slider Start -->
+    <div class="mySlides">
+      <!-- Slider Background Layer Start -->
+      <div id="pattern_bg">
+
+        <!-- Slider Quotes Layer Start -->
+        <div id="pattern_quotes"></div>
+        
+        <!-- Slider quotes layers end -->
+
+        <!-- Slider Person Image Layer Start -->
+        <div id="pattern_image"></div>
+        <!-- Slider Person Image Layer end -->
+        
+        <!-- Slider Icon Background start -->
+        <div id="icon_bg"></div>
+          <!-- Slider icon Background end -->
+        
+        <!-- Slider Main Text Quotes Start -->
+        <div id="pattern_content">
+          “ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”
+        </div>
+        <!-- Slider Main Text Quotes End -->
+
+        <!-- Slider Profession Text Start -->
+        <div id="pattern_subcontent">
+          <strong class="name">Tanya Sinclair</strong><weak class="profession">UX Engineer</weak>
+        </div>
+        <!-- Slider Profession Texgt End -->
+
+        <!-- Slider Curve Pattern start -->
+        <div id="pattern_curve">
+        </div>
+        <!-- Slider Curve Pattern end -->
+      </div>
+      <!-- Slider Background Layer End  -->
+    </div>
+    <!-- First Slider End -->
+<!-- ==================================================================================================================================================================================================================================================-->
+
+    <!-- Second Slider Start -->
+    <div class="mySlides">
+      <!-- Slider Background Layer Start -->
+      <div id="pattern_bg">
+        <!-- Slider Quotes Start -->
+        <div id="pattern_quotes">
+        </div>
+        <!-- Slider Quotes End -->
+        <!-- Slider Images Layer Start -->
+        <div id="pattern_image2">
+        </div>
+        <!-- Slider Image Layer End -->
+        
+        <!-- slider Icon background start -->
+        <div id="icon_bg"></div>
+        <!-- slider icon background end -->
+        
+        <!-- Slider main text start -->
+        <div id="pattern_content">
+          “If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”
+        </div>
+        <!-- Slider main text end -->
+
+        <!-- slider profession text start -->
+        <div id="pattern_subcontent2">
+          <strong class="name">John Tarkpor</strong><weak class="profession">Junior Front-end Developer</weak>
+        </div>
+        <!-- slider profession text end -->
+        <!-- slider curve pattern start -->
+        <div id="pattern_curve">
+        </div>
+        <!-- slider curve pattern end -->
+      </div>
+      <!-- Slider Background Layer End -->
+    </div>
+    <!-- Second Slider end -->
+    
+    <!-- Slider Icons button start -->
+    <div id="icon_next" onclick="plusSlides(-1)"></div>
+    <div id="icon_prev" onclick="plusSlides(1)"></div>
+    <!-- Slider Icons button end -->
+  </body>
+
+  <!-- slider Javascript code to change it on click start -->
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+  showSlides(slideIndex += n , { direction: "left" }, 1000);
+  
+  }
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+  }
+  function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+  <!-- slider javascript code to change it on click end -->
+</html>
